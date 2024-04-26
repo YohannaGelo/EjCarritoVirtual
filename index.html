@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="carrito.css">
+    <link rel="icon" href="img/carrito.png" type="image/x-icon">
+    <title>Carrito virtual</title>
+</head>
+
+<body>
+    <!-- Capa para el efecto borroso -->
+    <div id="blurLayer"></div>
+
+    <!-- Contenido -->
+    <center>
+        <h1>Mi Carrito de la Compra Virtual</h1>
+
+        <!-- Inicio de sesión -->
+        <div id="sesionModal">
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Ingresa tu nombre">
+                <button type="button" onclick="login()" style="background-color: rgba(25, 162, 73, 0.432);">Iniciar Sesión</button>
+                <button type="button" onclick="logout()" style="background-color: rgba(196, 16, 16, 0.521);">Cerrar Sesión</button>
+            </form>
+            <p id="sessionStatus">No hay ninguna sesión iniciada.</p>
+            <br>
+            <a href="#result"><button type="button" onclick="showItems()" class="carrito">
+                <img  src="img/carrito.png" alt="Carrito de la compra" style="width: 50px; height: 50px;">
+            </button></a>
+            <p style="color: rgb(196, 16, 16);">Ver tu carrito de la compra</p>
+        </div>
+
+        <!-- Caja para mostrar los productos -->
+        <div class="notebook">
+            <h2>Productos:</h2>
+            <div id="productList">
+                <!-- Aquí irán los productos disponibles para comprar -->
+            </div>
+        </div>
+
+
+        <!-- Capa para mostrar el carrito de la compra -->
+        <div id="result">
+            <table>
+                <!-- Aquí irán los productos del carrito de la compra -->
+            </table>
+        </div>
+    </center>
+
+    <script src="carrito.js"></script>
+</body>
+
+</html>
